@@ -1,0 +1,31 @@
+{
+    "tasks": [
+        {
+            "localPort": 1022,
+            "type": "group",
+            "targets": [
+                {
+                    "targetIp": "47.108.88.86",
+                    "targetPort": 22,
+                    "type": "tcp"
+                }
+            ]
+        },
+        {
+            "localPort": 1023,
+            "type": "forward",
+            "targets": [
+                {
+                    "targetIp": "47.108.88.86",
+                    "targetPort": 22,
+                    "type": "tcp"
+                },
+                {
+                    "targetIp": "127.0.0.1",
+                    "targetPort": 18080,
+                    "type": "http"
+                }
+            ]
+        }
+    ]
+}
